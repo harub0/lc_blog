@@ -13,6 +13,6 @@ class PostController extends Controller
         // $test = $post->orderBy('updated_at', 'DESC')->limit(2)->toSql();
         // dd($test);
         
-        return view('posts.index')->with(['posts' => $post->getByLimit()]);
+        return view('posts.index')->with(['posts' => $post->getPaginateByLimit()]);
     }
 }
